@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polanecki Parts</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background: black;
+        padding: 20px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        height: 80px;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: orange;
+        position: relative;
+        overflow: hidden;
+      }
+
+      nav a {
+        color: white;
+        margin-left: 15px;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .banner {
+        background: url('hexagon-banner.jpg') no-repeat center center/cover;
+        height: 400px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .banner h1 {
+        font-size: 3rem;
+        background: orange;
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 40px;
+        justify-content: center;
+      }
+
+      .product {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 220px;
+        text-align: center;
+      }
+
+      .product img {
+        width: 100%;
+        height: 160px;
+        object-fit: contain;
+      }
+
+      .product h3 {
+        font-size: 1rem;
+      }
+
+      .product p {
+        font-weight: bold;
+        color: orange;
+      }
+
+      footer {
+        background: black;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 30px;
+      }
+
+      .logo2 img {
+        height: 80px;
+        animation: rotateLogo 6s infinite ease-in-out;
+        transform-origin: center;
+      }
+
+      .logo:hover {
+        animation: swayLogo 1s infinite ease-in-out;
+      }
+
+      @keyframes rotateLogo {
+        0% {
+          transform: rotate(-15deg);
+        }
+        50% {
+          transform: rotate(15deg);
+        }
+        100% {
+          transform: rotate(-15deg);
+        }
+      }
+
+      @keyframes swayLogo {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        25% {
+          transform: rotate(100deg);
+        }
+
+        50% {
+          transform: rotate(0deg);
+        }
+
+        75% {
+          transform: rotate(-100deg);
+        }
+
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 15px; 
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <div class="logo">Polanecki Parts</div>
+        <div class="logo2">
+          <img src="images.png" height="80" alt="" />
+        </div>
+      </div>
+      <nav>
+        <a href="#">Strona główna</a>
+        <a href="#">Produkty</a>
+        <a href="#">Kontakt</a>
+        <a href="#">Konto</a>
+      </nav>
+    </header>
+
+    <section class="banner">
+      <h1>CASTROL - NOWA DOSTAWA!</h1>
+    </section>
+
+    <section class="products">
+      <div class="product">
+        <img src="images.png" alt="" />
+        <h3>Hamulce siusiaczkowe</h3>
+        <p>1 089,99 zł</p>
+      </div>
+      <div class="product">
+        <img
+          src="transmax-atf-dexron-vi-mercon-lv-multivehicle.png.img.750.medium.png"
+          alt="Castrol TRANSMAX ATF Dexron®-VI Mercon® LV Multivehicle"
+        />
+        <h3>Castrol TRANSMAX ATF Dexron®-VI Mercon® LV Multivehicle</h3>
+        <p>449,99 zł</p>
+      </div>
+      <div class="product">
+        <img
+          src="transmax-manual-fe-75w.png.img.750.medium.png"
+          alt="Castrol TRANSMAX Manual FE 75W"
+        />
+        <h3>Castrol TRANSMAX Manual FE 75W</h3>
+        <p>134,99 zł</p>
+      </div>
+      <div class="product">
+        <img
+          src="brake-fluid-dot4.png.img.750.medium.png"
+          alt="Klosz BMW"
+        />
+        <h3>Płyn hamulcowy Castrol DOT 4</h3>
+        <p>89,99 zł</p>
+      </div>
+      <div class="product">
+        <img
+          src="brake-fluid-dot4.png.img.750.medium.png"
+          alt="Soczewki Mini"
+        />
+        <h3>Castrol Chain Lube Racing</h3>
+        <p>349,99 zł</p>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 Polanecki Parts. Wszelkie prawa zastrzeżone.
+    </footer>
+  </body>
+</html>
