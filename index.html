@@ -121,6 +121,10 @@
         padding: 20px;
         width: 220px;
         text-align: center;
+        height: 275px; /* Utrzymuje stałą wysokość dla produktów */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Rozkłada elementy w pionie */
       }
 
       .product img {
@@ -131,11 +135,15 @@
 
       .product h3 {
         font-size: 1rem;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        flex-grow: 1; /* Pozwala nagłówkowi na elastyczne rozciąganie się */
       }
 
       .product p {
         font-weight: bold;
         color: orange;
+        margin-top: 0;
       }
 
       .news-sidebar {
@@ -275,12 +283,16 @@
           <li><a href="#">Filtry</a></li>
           <li><a href="#">Akumulatory</a></li>
           <li><a href="#">Opony</a></li>
+          <li><a href="#">Paski rozrządu</a></li>
+          <li><a href="#">Amortyzatory</a></li>
+          <li><a href="#">Świece zapłonowe</a></li>
+          <li><a href="#">Elementy zawieszenia</a></li>
         </ul>
       </section>
 
       <section class="products">
         <div class="product">
-          <img src="images.png" alt="" />
+          <img src="images.png" alt="Hamulce siusiaczkowe" />
           <h3>Hamulce siusiaczkowe</h3>
           <p>1 089,99 zł</p>
         </div>
@@ -303,7 +315,7 @@
         <div class="product">
           <img
             src="brake-fluid-dot4.png.img.750.medium.png"
-            alt="Klosz BMW"
+            alt="Płyn hamulcowy Castrol DOT 4"
           />
           <h3>Płyn hamulcowy Castrol DOT 4</h3>
           <p>89,99 zł</p>
@@ -311,10 +323,91 @@
         <div class="product">
           <img
             src="brake-fluid-dot4.png.img.750.medium.png"
-            alt="Soczewki Mini"
+            alt="Castrol Chain Lube Racing"
           />
           <h3>Castrol Chain Lube Racing</h3>
           <p>349,99 zł</p>
+        </div>
+
+        <div class="product">
+          <img
+            src="https://www.motochemia.pl/images/PR_Castrol_Edge_5W30_C3_5L.jpg"
+            alt="Olej silnikowy 5W-30"
+          />
+          <h3>Olej silnikowy Syntetyczny 5W-30</h3>
+          <p>119,99 zł</p>
+        </div>
+        <div class="product">
+          <img
+            src="https://static.piorawycieraczek.pl/dane/source/t/thh.letni-plyn-do-spryskiwaczy-k2-nano-sprysk-5l.jpg"
+            alt="Płyn do spryskiwaczy letni"
+          />
+          <h3>Płyn do spryskiwaczy letni 5L</h3>
+          <p>29,99 zł</p>
+        </div>
+        <div class="product">
+          <img
+            src="https://a.allegroimg.com/original/11a10e/5840d4214bcb87e95eb5d7fd3593/ORYGINALNY-ZESTAW-SPRZEGLA-SACHS-3000970116"
+            alt="Zestaw sprzęgła Sachs"
+          />
+          <h3>Zestaw sprzęgła Sachs</h3>
+          <p>899,00 zł</p>
+        </div>
+        <div class="product">
+          <img
+            src="https://www.ebrakes.pl/img/grande/477/klocki-hamulcowe-ate-13-0470-4880-2-standard.jpg"
+            alt="Klocki hamulcowe ATE"
+          />
+          <h3>Klocki hamulcowe przód ATE</h3>
+          <p>249,50 zł</p>
+        </div>
+        <div class="product">
+          <img
+            src="https://i.erli.pl/ck9vzx.9218b9.xl.jpg"
+            alt="Filtr oleju MANN"
+          />
+          <h3>Filtr oleju MANN</h3>
+          <p>45,00 zł</p>
+        </div>
+        <div class="product">
+          <img
+            src="https://image.ceneostatic.pl/data/products/16584884/p-varta-blue-dynamic-b18-44ah-440a.jpg"
+            alt="Akumulator Varta"
+          />
+          <h3>Akumulator Varta Silver Dynamic</h3>
+          <p>399,00 zł</p>
+        </div>
+        <div class="product">
+          <img
+            src="https://image.ceneostatic.pl/data/products/103300117/p-michelin-e-primacy-205-55r16-94h-xl-fr.jpg"
+            alt="Opona letnia Michelin"
+          />
+          <h3>Opona letnia Michelin Primacy 4</h3>
+          <p>579,00 zł</p>
+        </div>
+        <div class="product">
+          <img
+            src="https://a.allegroimg.com/s512/11e733/d96f03b64227a648835c7ad040b3/Pasek-rozrzadu-BOSCH-1987949192-06B109119A"
+            alt="Pasek rozrządu Bosch"
+          />
+          <h3>Pasek rozrządu Bosch</h3>
+          <p>179,99 zł</p>
+        </div>
+        <div class="product">
+          <img
+            src="https://cdn.motostacja.com/t/?img=/thumbs/19-138381.jpg"
+            alt="Amortyzator Bilstein"
+          />
+          <h3>Amortyzator Bilstein B4</h3>
+          <p>299,00 zł</p>
+        </div>
+        <div class="product">
+          <img
+            src="https://a.allegroimg.com/original/03ce68/02537ef04f35a61da044e918e645/SWIECA-ZAPLONOWA-LR8B-NGK"
+            alt="Świeca zapłonowa NGK"
+          />
+          <h3>Świeca zapłonowa NGK Iridium</h3>
+          <p>59,99 zł</p>
         </div>
       </section>
 
