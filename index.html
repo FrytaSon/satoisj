@@ -55,12 +55,63 @@
         border-radius: 10px;
       }
 
+      .main-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px;
+        gap: 40px; /* Przestrzeń między kolumnami */
+      }
+
+      .product-catalog {
+        flex: 1; /* Zajmuje dostępną przestrzeń */
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 250px; /* Ustawienie maksymalnej szerokości */
+      }
+
+      .product-catalog h2 {
+        text-align: center;
+        color: orange;
+        margin-bottom: 20px;
+      }
+
+      .product-catalog ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .product-catalog li {
+        margin-bottom: 10px;
+      }
+
+      .product-catalog a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        display: block;
+        padding: 8px 10px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .product-catalog a:hover {
+        background-color: orange;
+        color: white;
+      }
+
       .products {
+        flex: 3; /* Zajmuje większą część dostępnej przestrzeni */
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
-        padding: 40px;
         justify-content: center;
+        background: white; /* Dodane tło dla produktów */
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
       }
 
       .product {
@@ -87,6 +138,51 @@
         color: orange;
       }
 
+      .news-sidebar {
+        flex: 1; /* Zajmuje dostępną przestrzeń */
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 300px; /* Ustawienie maksymalnej szerokości */
+      }
+
+      .news-sidebar h2 {
+        text-align: center;
+        color: orange;
+        margin-bottom: 20px;
+      }
+
+      .news-item {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+      }
+
+      .news-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .news-item h3 {
+        font-size: 1.1rem;
+        color: #333;
+        margin-top: 0;
+      }
+
+      .news-item p {
+        font-size: 0.9rem;
+        color: #666;
+        line-height: 1.5;
+      }
+
+      .news-item .date {
+        font-size: 0.8rem;
+        color: #999;
+        text-align: right;
+      }
+
       footer {
         background: black;
         color: white;
@@ -107,13 +203,15 @@
 
       @keyframes rotateLogo {
         0% {
-          transform: rotate(-15deg);
+          transform: rotate(0deg);
         }
+
         50% {
-          transform: rotate(15deg);
+          transform: rotate(2deg);
         }
+
         100% {
-          transform: rotate(-15deg);
+          transform: rotate(0deg);
         }
       }
 
@@ -138,10 +236,11 @@
           transform: rotate(0deg);
         }
       }
+
       .header-left {
         display: flex;
         align-items: center;
-        gap: 15px; 
+        gap: 15px; /* Adjust gap between logo and logo2 */
       }
     </style>
   </head>
@@ -165,45 +264,88 @@
       <h1>CASTROL - NOWA DOSTAWA!</h1>
     </section>
 
-    <section class="products">
-      <div class="product">
-        <img src="images.png" alt="" />
-        <h3>Hamulce siusiaczkowe</h3>
-        <p>1 089,99 zł</p>
-      </div>
-      <div class="product">
-        <img
-          src="transmax-atf-dexron-vi-mercon-lv-multivehicle.png.img.750.medium.png"
-          alt="Castrol TRANSMAX ATF Dexron®-VI Mercon® LV Multivehicle"
-        />
-        <h3>Castrol TRANSMAX ATF Dexron®-VI Mercon® LV Multivehicle</h3>
-        <p>449,99 zł</p>
-      </div>
-      <div class="product">
-        <img
-          src="transmax-manual-fe-75w.png.img.750.medium.png"
-          alt="Castrol TRANSMAX Manual FE 75W"
-        />
-        <h3>Castrol TRANSMAX Manual FE 75W</h3>
-        <p>134,99 zł</p>
-      </div>
-      <div class="product">
-        <img
-          src="brake-fluid-dot4.png.img.750.medium.png"
-          alt="Klosz BMW"
-        />
-        <h3>Płyn hamulcowy Castrol DOT 4</h3>
-        <p>89,99 zł</p>
-      </div>
-      <div class="product">
-        <img
-          src="brake-fluid-dot4.png.img.750.medium.png"
-          alt="Soczewki Mini"
-        />
-        <h3>Castrol Chain Lube Racing</h3>
-        <p>349,99 zł</p>
-      </div>
-    </section>
+    <div class="main-content">
+      <section class="product-catalog">
+        <h2>Katalog Produktów</h2>
+        <ul>
+          <li><a href="#">Oleje silnikowe</a></li>
+          <li><a href="#">Płyny do spryskiwaczy</a></li>
+          <li><a href="#">Sprzęgła</a></li>
+          <li><a href="#">Klocki hamulcowe</a></li>
+          <li><a href="#">Filtry</a></li>
+          <li><a href="#">Akumulatory</a></li>
+          <li><a href="#">Opony</a></li>
+        </ul>
+      </section>
+
+      <section class="products">
+        <div class="product">
+          <img src="images.png" alt="" />
+          <h3>Hamulce siusiaczkowe</h3>
+          <p>1 089,99 zł</p>
+        </div>
+        <div class="product">
+          <img
+            src="transmax-atf-dexron-vi-mercon-lv-multivehicle.png.img.750.medium.png"
+            alt="Castrol TRANSMAX ATF Dexron®-VI Mercon® LV Multivehicle"
+          />
+          <h3>Castrol TRANSMAX ATF Dexron®-VI Mercon® LV Multivehicle</h3>
+          <p>449,99 zł</p>
+        </div>
+        <div class="product">
+          <img
+            src="transmax-manual-fe-75w.png.img.750.medium.png"
+            alt="Castrol TRANSMAX Manual FE 75W"
+          />
+          <h3>Castrol TRANSMAX Manual FE 75W</h3>
+          <p>134,99 zł</p>
+        </div>
+        <div class="product">
+          <img
+            src="brake-fluid-dot4.png.img.750.medium.png"
+            alt="Klosz BMW"
+          />
+          <h3>Płyn hamulcowy Castrol DOT 4</h3>
+          <p>89,99 zł</p>
+        </div>
+        <div class="product">
+          <img
+            src="brake-fluid-dot4.png.img.750.medium.png"
+            alt="Soczewki Mini"
+          />
+          <h3>Castrol Chain Lube Racing</h3>
+          <p>349,99 zł</p>
+        </div>
+      </section>
+
+      <section class="news-sidebar">
+        <h2>Nowości i Promocje</h2>
+        <div class="news-item">
+          <h3>Wielka promocja na oleje Castrol!</h3>
+          <p>
+            Tylko teraz, kupując oleje Castrol, otrzymasz dodatkowe 10% rabatu
+            na całe zamówienie! Sprawdź naszą ofertę.
+          </p>
+          <div class="date">05 Czerwca 2025</div>
+        </div>
+        <div class="news-item">
+          <h3>Nowe sprzęgła LUK w ofercie!</h3>
+          <p>
+            Poszerzyliśmy asortyment o wysokiej jakości sprzęgła marki LUK,
+            dostępne do wielu modeli samochodów.
+          </p>
+          <div class="date">01 Czerwca 2025</div>
+        </div>
+        <div class="news-item">
+          <h3>Letnia wyprzedaż płynów do spryskiwaczy!</h3>
+          <p>
+            Przygotuj się na lato z naszymi płynami do spryskiwaczy w
+            atrakcyjnych cenach.
+          </p>
+          <div class="date">28 Maja 2025</div>
+        </div>
+      </section>
+    </div>
 
     <footer>
       &copy; 2025 Polanecki Parts. Wszelkie prawa zastrzeżone.
